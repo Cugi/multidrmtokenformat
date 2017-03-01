@@ -1,85 +1,84 @@
 {
-	"type":"object",
-	"$schema": "https://github.com/Cugi/multidrmtokenformat/blob/master/jsonschemamultidrmtoken.json",
-	"id": "https://github.com/Cugi/multidrmtokenformat/blob/master/jsonschemamultidrmtoken.json",
-	"required":false,
-	"properties":{
-		"Asset": {
-			"type":"object",
-			"id": "http://jsonschema.net/Asset",
-			"required":false,
-			"properties":{
-				"DRM": {
-					"type":"object",
-					"id": "http://jsonschema.net/Asset/DRM",
-					"required":false,
-					"properties":{
-						"FairPlay": {
-							"type":"object",
-							"id": "http://jsonschema.net/Asset/DRM/FairPlay",
-							"required":false,
-							"properties":{
-								"licenseAcquisitionUrl": {
-									"type":"string",
-									"id": "http://jsonschema.net/Asset/DRM/FairPlay/licenseAcquisitionUrl",
-									"required":false
-								}
-							}
-						},
-						"Marlin": {
-							"type":"object",
-							"id": "http://jsonschema.net/Asset/DRM/Marlin",
-							"required":false,
-							"properties":{
-								"mbb": {
-									"type":"string",
-									"id": "http://jsonschema.net/Asset/DRM/Marlin/mbb",
-									"required":false
-								},
-								"ms3": {
-									"type":"string",
-									"id": "http://jsonschema.net/Asset/DRM/Marlin/ms3",
-									"required":false
-								}
-							}
-						},
-						"PlayReady": {
-							"type":"object",
-							"id": "http://jsonschema.net/Asset/DRM/PlayReady",
-							"required":false,
-							"properties":{
-								"licenseAcquisitionUrl": {
-									"type":"string",
-									"id": "http://jsonschema.net/Asset/DRM/PlayReady/licenseAcquisitionUrl",
-									"required":false
-								}
-							}
-						},
-						"Widevine": {
-							"type":"object",
-							"id": "http://jsonschema.net/Asset/DRM/Widevine",
-							"required":false,
-							"properties":{
-								"licenseAcquisitionUrl": {
-									"type":"string",
-									"id": "http://jsonschema.net/Asset/DRM/Widevine/licenseAcquisitionUrl",
-									"required":false
-								}
-							}
-						}
-					}
-				},
-				"DashManifestUrl": {
-					"type":"string",
-					"id": "http://jsonschema.net/Asset/DashManifestUrl",
-					"required":false
-				},
-				"HlsManifestUrl": {
-					"type":"string",
-					"id": "http://jsonschema.net/Asset/HlsManifestUrl",
-					"required":false
-				}
-			}
-		}
-	}
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Asset": {
+      "type": "object",
+      "properties": {
+        "DashManifestUrl": {
+          "type": "string"
+        },
+        "HlsManifestUrl": {
+          "type": "string"
+        },
+        "DRM": {
+          "type": "object",
+          "properties": {
+            "Marlin": {
+              "type": "object",
+              "properties": {
+                "ms3": {
+                  "type": "string"
+                },
+                "mbb": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ms3",
+                "mbb"
+              ]
+            },
+            "PlayReady": {
+              "type": "object",
+              "properties": {
+                "licenseAcquisitionUrl": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "licenseAcquisitionUrl"
+              ]
+            },
+            "Widevine": {
+              "type": "object",
+              "properties": {
+                "licenseAcquisitionUrl": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "licenseAcquisitionUrl"
+              ]
+            },
+            "FairPlay": {
+              "type": "object",
+              "properties": {
+                "licenseAcquisitionUrl": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "licenseAcquisitionUrl"
+              ]
+            }
+          },
+          "required": [
+            "Marlin",
+            "PlayReady",
+            "Widevine",
+            "FairPlay"
+          ]
+        }
+      },
+      "required": [
+        "DashManifestUrl",
+        "HlsManifestUrl",
+        "DRM"
+      ]
+    }
+  },
+  "required": [
+    "Asset"
+  ]
 }
