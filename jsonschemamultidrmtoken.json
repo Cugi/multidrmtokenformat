@@ -1,7 +1,7 @@
 {
 	"type":"object",
-	"$schema": "http://json-schema.org/draft-03/schema",
-	"id": "http://jsonschema.net",
+	"$schema": "https://github.com/Cugi/multidrmtokenformat/blob/master/jsonschemamultidrmtoken.json",
+	"id": "https://github.com/Cugi/multidrmtokenformat/blob/master/jsonschemamultidrmtoken.json",
 	"required":false,
 	"properties":{
 		"Asset": {
