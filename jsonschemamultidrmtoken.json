@@ -1,0 +1,85 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":false,
+	"properties":{
+		"Asset": {
+			"type":"object",
+			"id": "http://jsonschema.net/Asset",
+			"required":false,
+			"properties":{
+				"DRM": {
+					"type":"object",
+					"id": "http://jsonschema.net/Asset/DRM",
+					"required":false,
+					"properties":{
+						"FairPlay": {
+							"type":"object",
+							"id": "http://jsonschema.net/Asset/DRM/FairPlay",
+							"required":false,
+							"properties":{
+								"licenseAcquisitionUrl": {
+									"type":"string",
+									"id": "http://jsonschema.net/Asset/DRM/FairPlay/licenseAcquisitionUrl",
+									"required":false
+								}
+							}
+						},
+						"Marlin": {
+							"type":"object",
+							"id": "http://jsonschema.net/Asset/DRM/Marlin",
+							"required":false,
+							"properties":{
+								"mbb": {
+									"type":"string",
+									"id": "http://jsonschema.net/Asset/DRM/Marlin/mbb",
+									"required":false
+								},
+								"ms3": {
+									"type":"string",
+									"id": "http://jsonschema.net/Asset/DRM/Marlin/ms3",
+									"required":false
+								}
+							}
+						},
+						"PlayReady": {
+							"type":"object",
+							"id": "http://jsonschema.net/Asset/DRM/PlayReady",
+							"required":false,
+							"properties":{
+								"licenseAcquisitionUrl": {
+									"type":"string",
+									"id": "http://jsonschema.net/Asset/DRM/PlayReady/licenseAcquisitionUrl",
+									"required":false
+								}
+							}
+						},
+						"Widevine": {
+							"type":"object",
+							"id": "http://jsonschema.net/Asset/DRM/Widevine",
+							"required":false,
+							"properties":{
+								"licenseAcquisitionUrl": {
+									"type":"string",
+									"id": "http://jsonschema.net/Asset/DRM/Widevine/licenseAcquisitionUrl",
+									"required":false
+								}
+							}
+						}
+					}
+				},
+				"DashManifestUrl": {
+					"type":"string",
+					"id": "http://jsonschema.net/Asset/DashManifestUrl",
+					"required":false
+				},
+				"HlsManifestUrl": {
+					"type":"string",
+					"id": "http://jsonschema.net/Asset/HlsManifestUrl",
+					"required":false
+				}
+			}
+		}
+	}
+}
